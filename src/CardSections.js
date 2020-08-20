@@ -6,8 +6,8 @@ import 'office-ui-fabric-react/dist/css/fabric.css';
 
 const container = {
   display: 'flex',
-  justifyContent: 'center',
-  margin: '10vh 0',
+  justifyContent: 'center',  
+  margin: '10vh 0',  
 };
 
 const icon = {
@@ -15,7 +15,7 @@ const icon = {
   padding: 15,
   verticalAlign: 'middle',
   paddingLeft: 0,
-  color: '#0078d4'
+  color: '#45B34A',
 }
 
 const styles = {
@@ -23,7 +23,9 @@ const styles = {
     root: {
       background: 'white',
       padding: 20,
-      borderTop: '5px solid #0078d4',
+      borderTop: '5px solid #45B34A',
+      boxSizing: 'border-box',
+      borderRadius: '10px',
       width: '90%',
       maxWidth: '90%',
       margin: 'auto',
@@ -46,7 +48,7 @@ const styles = {
     root: {
       fontSize: 16,
       fontWeight: 'bold',
-      color: '#0078d4',
+      color: '#45B34A',
     }
   }
 };
