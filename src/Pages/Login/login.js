@@ -1,23 +1,55 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import Logo from '../../assets/images/logo.svg';
 import '../../App.css';
 import {Container, Form, ButtonLink} from './style';
+import api from '../../services/api';
 
+function Login() {
 
-function login () {
+  const [infos, setInfos] = useState({
+    cpf: '',
+    password: '',
+  });
+
+  const onFormSubmit = async (e) => {
+    e.preventDefault();
+
+    const { cpf, password: pass } = infos;
+
+    const infosToApi = {
+      cpf,
+      pass,
+    };
+
+    const response = await api.post('/', infosToApi);
+    console.log(response);
+
+    if(response.status !== 200) {
+      console.log(response);
+      return alert('Houve um erro ao autenticar usuário');
+    };
+
+    const handleInputChange = (e) => {
+      setInfos({
+        ...infos,
+        [e.target.name] : e.target.value
+      })
+    }
+  };
     return (
-        <div className="App">
+        <div className="Login">
           <>
             <Container>
               <img src={Logo} alt="Logo Conta Simples" />
               <h1>Faça seu login</h1>
 
-              <Form>
+              <Form onSubmit={onFormSubmit}>
                 <input
                   type="text"
                   name="CPF"
                   placeholder="Digite seu CPF"
+                  //onChange={handleInputChange}
                 />
 
                 <input
@@ -41,4 +73,4 @@ function login () {
       );
 }
 
-export default login;
+export default Login;
