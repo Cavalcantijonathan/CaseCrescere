@@ -50,3 +50,19 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
 `;
+
+export const ButtonLink = styled.button`
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #45B34A;
+  margin: 10px;
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  &:hover {
+    background-color: #36873A;
+    cursor: pointer;
+  }
+  `;
