@@ -22,36 +22,60 @@ const links  = [
             {
                 name: 'Inicio',
                 url: '/',
-                key: 'key1',                
-                icon: 'Home',      
+                key: 'key1',
+                icon: 'Home',
             },
             {
-                name: 'Cartões',
+                name: 'Depositar',
                 url: '/',
                 key: 'key2',
-                icon: 'PaymentCard',
+                icon: 'Savings',
                 // iconsProps: {
                 //     iconName:'PlayerSettings',
                 //     styles: {
                 //         root:{
                 //             fontSize: 20,
-                //             color: '#45B54A', 
+                //             color: '#45B54A',
                 //         }
                 //     }
                 // }
             },
             {
-                name: 'Transferencia',
+                name: 'Extrato da Conta',
                 url: '/',
                 key: 'key3',
-                icon: 'SwitcherStartEnd',
+                icon: 'StackedLineChart',
             },
             {
-                name: 'Saldo',
+                name: 'Cartões',
                 url: '/',
                 key: 'key4',
-                icon: 'StackedLineChart',
-            }
+                icon: 'PaymentCard',
+            },
+            {
+              name: 'Emitir Cobrança',
+              url: '/',
+              key: 'key5',
+              icon: 'Money',
+            },
+            {
+              name: 'Gestão de Cobrança',
+              url: '/',
+              key: 'key6',
+              icon: 'BarChartVertical',
+            },
+            {
+              name: 'Transferência',
+              url: '/',
+              key: 'key7',
+              icon: 'SwitcherStartEnd',
+            },
+            {
+              name: 'Pagamento',
+              url: '/',
+              key: 'key8',
+              icon: 'Bank',
+            },
         ]
     }
 ]
@@ -59,12 +83,12 @@ const links  = [
 const Navigation = () => {
     initializeIcons();
     return (
-        <Nav 
+        <Nav
             groups = {links}
             selectedKey="key1"
             styles={navigationStyles}
         />
-    )       
+    )
 }
 
 export default Navigation;

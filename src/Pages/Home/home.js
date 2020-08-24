@@ -5,6 +5,7 @@ import Navigation from '../../Components/Navigation/Navigation';
 import CardSection from '../../Components/Cards/CardSections';
 
 
+
 function Home () {
     return (
         <div className="ms-Grid" dir="ltr">
@@ -16,12 +17,12 @@ function Home () {
               <div class="ms-Grid-row">
                 <CardSection />
               </div>
-              <div class="ms-Grid-row">    
+              <div class="ms-Grid-row">
               </div>
-            </div>        
-          </div>      
+            </div>
+          </div>
         </div>
-      );
+     );
 }
 
 export default Home;

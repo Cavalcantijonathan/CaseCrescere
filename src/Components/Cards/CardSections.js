@@ -6,8 +6,8 @@ import 'office-ui-fabric-react/dist/css/fabric.css';
 
 const container = {
   display: 'flex',
-  justifyContent: 'center',  
-  margin: '10vh 0',  
+  justifyContent: 'center',
+  margin: '10vh 0',
 };
 
 const icon = {
